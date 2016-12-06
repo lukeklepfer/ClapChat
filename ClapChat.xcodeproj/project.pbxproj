@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD7E68C61DF75EA800EF84AA /* AAPLCameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraVCDelegate.h; sourceTree = "<group>"; };
 		AD8D7A1D1DF747F600DB2DAF /* ClapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8D7A221DF747F600DB2DAF /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -42,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD7E68C01DF7572B00EF84AA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AD7E68C61DF75EA800EF84AA /* AAPLCameraVCDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		AD8D7A141DF747F600DB2DAF = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */,
+				AD7E68C01DF7572B00EF84AA /* Protocols */,
 				AD8D7A341DF7492500DB2DAF /* Controller */,
 				AD8D7A331DF7492100DB2DAF /* View */,
 				AD8D7A321DF7491C00DB2DAF /* Model */,
@@ -348,6 +358,7 @@
 				AD8D7A311DF747F600DB2DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
