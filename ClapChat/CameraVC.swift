@@ -20,13 +20,12 @@ class CameraVC: AAPLCameraViewController {
     }
 
     @IBAction func cameraChangeTapped(_ sender: Any) {
-        
+        changeCamera()
         
     }
     
     @IBAction func snapBtnTapped(_ sender: Any) {
-        
-        
+        toggleMovieRecording()
     }
     
 }
