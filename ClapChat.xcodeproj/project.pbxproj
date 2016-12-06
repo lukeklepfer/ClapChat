@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1C711E4B69B28B974B361B0E /* Pods_ClapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE775D43AD0D6B1A6FB3E165 /* Pods_ClapChat.framework */; };
 		AD7E68C81DF7635600EF84AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7E68C71DF7635600EF84AA /* GoogleService-Info.plist */; };
+		AD83FE411DF77EBC0017EF9C /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */; };
+		AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE421DF780A80017EF9C /* RoundedButton.swift */; };
 		AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */; };
 		AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A221DF747F600DB2DAF /* CameraVC.swift */; };
 		AD8D7A261DF747F600DB2DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8D7A241DF747F600DB2DAF /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		A07560517B525EA1CE7750B4 /* Pods-ClapChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClapChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClapChat/Pods-ClapChat.release.xcconfig"; sourceTree = "<group>"; };
 		AD7E68C61DF75EA800EF84AA /* AAPLCameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraVCDelegate.h; sourceTree = "<group>"; };
 		AD7E68C71DF7635600EF84AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		AD83FE421DF780A80017EF9C /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		AD8D7A1D1DF747F600DB2DAF /* ClapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8D7A221DF747F600DB2DAF /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		AD8D7A331DF7492100DB2DAF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */,
+				AD83FE421DF780A80017EF9C /* RoundedButton.swift */,
 				AD8D7A381DF7495A00DB2DAF /* AAPLPreviewView.h */,
 				AD8D7A391DF7495A00DB2DAF /* AAPLPreviewView.m */,
 			);
@@ -264,7 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */,
+				AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */,
 				AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */,
+				AD83FE411DF77EBC0017EF9C /* RoundTextField.swift in Sources */,
 				AD8D7A3A1DF7495A00DB2DAF /* AAPLCameraViewController.m in Sources */,
 				AD8D7A3B1DF7495A00DB2DAF /* AAPLPreviewView.m in Sources */,
 			);
