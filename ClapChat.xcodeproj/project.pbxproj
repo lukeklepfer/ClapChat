@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */; };
-		AD8D7A231DF747F600DB2DAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A221DF747F600DB2DAF /* ViewController.swift */; };
+		AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A221DF747F600DB2DAF /* CameraVC.swift */; };
 		AD8D7A261DF747F600DB2DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8D7A241DF747F600DB2DAF /* Main.storyboard */; };
 		AD8D7A281DF747F600DB2DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD8D7A271DF747F600DB2DAF /* Assets.xcassets */; };
 		AD8D7A2B1DF747F600DB2DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8D7A291DF747F600DB2DAF /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		AD8D7A1D1DF747F600DB2DAF /* ClapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD8D7A221DF747F600DB2DAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD8D7A221DF747F600DB2DAF /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		AD8D7A251DF747F600DB2DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD8D7A271DF747F600DB2DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD8D7A2A1DF747F600DB2DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */,
-				AD8D7A221DF747F600DB2DAF /* ViewController.swift */,
+				AD8D7A221DF747F600DB2DAF /* CameraVC.swift */,
 				AD8D7A241DF747F600DB2DAF /* Main.storyboard */,
 				AD8D7A271DF747F600DB2DAF /* Assets.xcassets */,
 				AD8D7A291DF747F600DB2DAF /* LaunchScreen.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD8D7A231DF747F600DB2DAF /* ViewController.swift in Sources */,
+				AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */,
 				AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
