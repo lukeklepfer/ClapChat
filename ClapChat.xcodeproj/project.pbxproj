@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C711E4B69B28B974B361B0E /* Pods_ClapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE775D43AD0D6B1A6FB3E165 /* Pods_ClapChat.framework */; };
+		AD14DF6A1DF79D4E004BD294 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14DF691DF79D4E004BD294 /* LoginVC.swift */; };
 		AD7E68C81DF7635600EF84AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7E68C71DF7635600EF84AA /* GoogleService-Info.plist */; };
 		AD83FE411DF77EBC0017EF9C /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */; };
 		AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE421DF780A80017EF9C /* RoundedButton.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		A07560517B525EA1CE7750B4 /* Pods-ClapChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClapChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClapChat/Pods-ClapChat.release.xcconfig"; sourceTree = "<group>"; };
+		AD14DF691DF79D4E004BD294 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AD7E68C61DF75EA800EF84AA /* AAPLCameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraVCDelegate.h; sourceTree = "<group>"; };
 		AD7E68C71DF7635600EF84AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8D7A221DF747F600DB2DAF /* CameraVC.swift */,
+				AD14DF691DF79D4E004BD294 /* LoginVC.swift */,
 				AD8D7A361DF7495A00DB2DAF /* AAPLCameraViewController.h */,
 				AD8D7A371DF7495A00DB2DAF /* AAPLCameraViewController.m */,
 			);
@@ -271,6 +274,7 @@
 			files = (
 				AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */,
 				AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */,
+				AD14DF6A1DF79D4E004BD294 /* LoginVC.swift in Sources */,
 				AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */,
 				AD83FE411DF77EBC0017EF9C /* RoundTextField.swift in Sources */,
 				AD8D7A3A1DF7495A00DB2DAF /* AAPLCameraViewController.m in Sources */,
