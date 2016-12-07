@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
@@ -16,6 +16,9 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.emailTxtField.delegate = self
+        self.passwordTxtField.delegate = self
 
     }
 
@@ -23,8 +26,18 @@ class LoginVC: UIViewController {
         
         if let email = emailTxtField.text, let password = passwordTxtField.text, (email.characters.count > 0 && password.characters.count > 0 ){
             
-            AuthService.instance.login(email: email, pass: password)
-            //just checking git
+            AuthService.instance.login(email: email, pass: password, onComplete: { (errMsg, data) in
+                
+                guard errMsg == nil else{
+                    let alert = UIAlertController(title: "Error Authenticating", message: errMsg, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            })
             
         }else{
             let alert = UIAlertController(title: "Email and Password Required", message: "Enter an email and Password", preferredStyle: .alert)
@@ -33,6 +46,10 @@ class LoginVC: UIViewController {
             
         }
         
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
 }
