@@ -24,6 +24,7 @@ class LoginVC: UIViewController {
         if let email = emailTxtField.text, let password = passwordTxtField.text, (email.characters.count > 0 && password.characters.count > 0 ){
             
             AuthService.instance.login(email: email, pass: password)
+            //just checking git
             
         }else{
             let alert = UIAlertController(title: "Email and Password Required", message: "Enter an email and Password", preferredStyle: .alert)
