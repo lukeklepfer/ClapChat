@@ -19,6 +19,9 @@ class DataService {
     var mainRef: FIRDatabaseReference {
         return FIRDatabase.database().reference()
     }
+    var usersRef: FIRDatabaseReference{
+        return mainRef.child("users")
+    }
     
     func saveUser(uid: String){
         let profile: Dictionary<String, Any> = ["firstName": "", "lastName": ""]
