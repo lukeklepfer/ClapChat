@@ -13,6 +13,7 @@
 		AD83FE411DF77EBC0017EF9C /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */; };
 		AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE421DF780A80017EF9C /* RoundedButton.swift */; };
 		AD8BE2A31DF87E61009079AD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8BE2A21DF87E61009079AD /* AuthService.swift */; };
+		AD8BE2A51DF895EF009079AD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8BE2A41DF895EF009079AD /* DataService.swift */; };
 		AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */; };
 		AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A221DF747F600DB2DAF /* CameraVC.swift */; };
 		AD8D7A261DF747F600DB2DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8D7A241DF747F600DB2DAF /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		AD83FE421DF780A80017EF9C /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		AD8BE2A21DF87E61009079AD /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AD8BE2A41DF895EF009079AD /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AD8D7A1D1DF747F600DB2DAF /* ClapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8D7A221DF747F600DB2DAF /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8BE2A21DF87E61009079AD /* AuthService.swift */,
+				AD8BE2A41DF895EF009079AD /* DataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD8BE2A51DF895EF009079AD /* DataService.swift in Sources */,
 				AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */,
 				AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */,
 				AD14DF6A1DF79D4E004BD294 /* LoginVC.swift in Sources */,

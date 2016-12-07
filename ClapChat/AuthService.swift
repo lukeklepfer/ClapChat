@@ -32,6 +32,7 @@ class AuthService {
                             }else{
                                 //user created
                                 if user?.uid != nil{
+                                    DataService.instance.saveUser(uid: user!.uid)//app user created.
                                     FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
                                         
                                         if error != nil{
