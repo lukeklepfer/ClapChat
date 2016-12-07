@@ -64,16 +64,17 @@
                         <outlet property="camBtn" destination="fag-jh-lxT" id="c0C-Bi-srQ"/>
                         <outlet property="previewView" destination="Luh-Fk-2xg" id="D9M-Ol-kH6"/>
                         <outlet property="recordBtn" destination="Exp-Nb-cFk" id="Tr0-AC-M06"/>
+                        <segue destination="bA9-Aa-RF1" kind="presentation" identifier="ShowLoginVC" id="f2R-Rp-Fok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+            <point key="canvasLocation" x="-39" y="36"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="ASa-cA-y5o">
             <objects>
-                <viewController id="bA9-Aa-RF1" sceneMemberID="viewController">
+                <viewController id="bA9-Aa-RF1" customClass="LoginVC" customModule="ClapChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7zA-5j-ZuX"/>
                         <viewControllerLayoutGuide type="bottom" id="Yix-ZT-YLz"/>
@@ -183,6 +184,9 @@
                                         <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBtnTapped:" destination="bA9-Aa-RF1" eventType="touchUpInside" id="W5l-dZ-JEN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,6 +209,10 @@
                             <constraint firstItem="9WK-U4-GvQ" firstAttribute="centerX" secondItem="CT9-Sr-Jec" secondAttribute="centerX" id="wB4-fk-vig"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTxtField" destination="Fcw-85-bC6" id="vWF-gO-g1x"/>
+                        <outlet property="passwordTxtField" destination="3PE-ce-xwJ" id="4Dg-6t-dIV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDT-za-QPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

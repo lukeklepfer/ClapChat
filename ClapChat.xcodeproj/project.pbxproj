@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1C711E4B69B28B974B361B0E /* Pods_ClapChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE775D43AD0D6B1A6FB3E165 /* Pods_ClapChat.framework */; };
+		AD14DF6A1DF79D4E004BD294 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14DF691DF79D4E004BD294 /* LoginVC.swift */; };
 		AD7E68C81DF7635600EF84AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD7E68C71DF7635600EF84AA /* GoogleService-Info.plist */; };
 		AD83FE411DF77EBC0017EF9C /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */; };
 		AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD83FE421DF780A80017EF9C /* RoundedButton.swift */; };
+		AD8BE2A31DF87E61009079AD /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8BE2A21DF87E61009079AD /* AuthService.swift */; };
 		AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */; };
 		AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D7A221DF747F600DB2DAF /* CameraVC.swift */; };
 		AD8D7A261DF747F600DB2DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8D7A241DF747F600DB2DAF /* Main.storyboard */; };
@@ -22,10 +24,12 @@
 
 /* Begin PBXFileReference section */
 		A07560517B525EA1CE7750B4 /* Pods-ClapChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClapChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClapChat/Pods-ClapChat.release.xcconfig"; sourceTree = "<group>"; };
+		AD14DF691DF79D4E004BD294 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AD7E68C61DF75EA800EF84AA /* AAPLCameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraVCDelegate.h; sourceTree = "<group>"; };
 		AD7E68C71DF7635600EF84AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD83FE401DF77EBC0017EF9C /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		AD83FE421DF780A80017EF9C /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		AD8BE2A21DF87E61009079AD /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AD8D7A1D1DF747F600DB2DAF /* ClapChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClapChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD8D7A221DF747F600DB2DAF /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -79,6 +83,14 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
+		AD8BE2A11DF87E44009079AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD8BE2A21DF87E61009079AD /* AuthService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		AD8D7A141DF747F600DB2DAF = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +112,7 @@
 		AD8D7A1F1DF747F600DB2DAF /* ClapChat */ = {
 			isa = PBXGroup;
 			children = (
+				AD8BE2A11DF87E44009079AD /* Services */,
 				AD8D7A201DF747F600DB2DAF /* AppDelegate.swift */,
 				AD7E68C01DF7572B00EF84AA /* Protocols */,
 				AD8D7A341DF7492500DB2DAF /* Controller */,
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8D7A221DF747F600DB2DAF /* CameraVC.swift */,
+				AD14DF691DF79D4E004BD294 /* LoginVC.swift */,
 				AD8D7A361DF7495A00DB2DAF /* AAPLCameraViewController.h */,
 				AD8D7A371DF7495A00DB2DAF /* AAPLCameraViewController.m */,
 			);
@@ -178,7 +192,7 @@
 				TargetAttributes = {
 					AD8D7A1C1DF747F600DB2DAF = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = HX5Z8E9QEF;
+						DevelopmentTeam = R35YZ2DQK9;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -271,10 +285,12 @@
 			files = (
 				AD8D7A231DF747F600DB2DAF /* CameraVC.swift in Sources */,
 				AD83FE431DF780A80017EF9C /* RoundedButton.swift in Sources */,
+				AD14DF6A1DF79D4E004BD294 /* LoginVC.swift in Sources */,
 				AD8D7A211DF747F600DB2DAF /* AppDelegate.swift in Sources */,
 				AD83FE411DF77EBC0017EF9C /* RoundTextField.swift in Sources */,
 				AD8D7A3A1DF7495A00DB2DAF /* AAPLCameraViewController.m in Sources */,
 				AD8D7A3B1DF7495A00DB2DAF /* AAPLPreviewView.m in Sources */,
+				AD8BE2A31DF87E61009079AD /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HX5Z8E9QEF;
+				DEVELOPMENT_TEAM = R35YZ2DQK9;
 				INFOPLIST_FILE = ClapChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -417,7 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = HX5Z8E9QEF;
+				DEVELOPMENT_TEAM = R35YZ2DQK9;
 				INFOPLIST_FILE = ClapChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
