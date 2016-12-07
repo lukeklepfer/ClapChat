@@ -24,10 +24,10 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate{
     }
     override func viewDidAppear(_ animated: Bool) {
         
-//        guard FIRAuth.auth()?.currentUser != nil else {
+       guard FIRAuth.auth()?.currentUser != nil else {
            performSegue(withIdentifier: "ShowLoginVC", sender: nil)
-//            return
-//        }
+            return
+        }
     }
 
     @IBAction func cameraChangeTapped(_ sender: Any) {
@@ -36,6 +36,32 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate{
     }
     @IBAction func recBtnTapped(_ sender: Any) {
         toggleMovieRecording()
+    }
+    
+    
+    func videoRecordingComplete(_ videoURL: URL!) {
+        performSegue(withIdentifier: "ShowUsersVC", sender: ["videoUrl": videoURL])
+    }
+    func videoRecordingFailed() {
+        
+    }
+    func snapshotFailed() {
+        
+    }
+    func snapshotTaken(_ snapshotData: Data!) {
+        performSegue(withIdentifier: "ShowUsersVC", sender: ["snapData": snapshotData])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let usersVC = segue.destination as? UsersVC {
+            if let vidDict = sender as? Dictionary<String, URL>{
+                let url = vidDict["videoUrl"]
+                usersVC.videoUrl = url
+            }else if let snapDict = sender as? Dictionary<String, Data> {
+                let snapData = snapDict["snapData"]
+                usersVC.imageData = snapData
+            }
+        }
     }
     
     func shouldEnableCameraUI(_ enable: Bool) {
@@ -51,7 +77,6 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate{
     }
     func canStartRecording() {
         print("Recording can start")
-        
     }
 }   
 

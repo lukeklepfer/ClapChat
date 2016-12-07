@@ -563,7 +563,10 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 			if ( imageDataSampleBuffer ) {
 				// The sample buffer is not retained. Create image data before saving the still image to the photo library asynchronously.
 				NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-				[PHPhotoLibrary requestAuthorization:^( PHAuthorizationStatus status ) {
+                [self.delegate snapshotTaken:imageData];
+                
+                /*
+                [PHPhotoLibrary requestAuthorization:^( PHAuthorizationStatus status ) {
 					if ( status == PHAuthorizationStatusAuthorized ) {
 						// To preserve the metadata, we create an asset from the JPEG NSData representation.
 						// Note that creating an asset from a UIImage discards the metadata.
@@ -603,8 +606,11 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 						}
 					}
 				}];
+                 */
+                
 			}
 			else {
+                [self.delegate snapshotFailed];
 				NSLog( @"Could not capture still image: %@", error );
 			}
 		}];
@@ -649,10 +655,12 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 	if ( error ) {
 		NSLog( @"Movie file finishing error: %@", error );
 		success = [error.userInfo[AVErrorRecordingSuccessfullyFinishedKey] boolValue];
+        [self.delegate videoRecordingFailed];
 	}
 	if ( success ) {
+        [self.delegate videoRecordingComplete:outputFileURL];
 		// Check authorization status.
-		[PHPhotoLibrary requestAuthorization:^( PHAuthorizationStatus status ) {
+		/*[PHPhotoLibrary requestAuthorization:^( PHAuthorizationStatus status ) {
 			if ( status == PHAuthorizationStatusAuthorized ) {
 				// Save the movie file to the photo library and cleanup.
 				[[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
@@ -673,13 +681,16 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 					}
 					cleanup();
 				}];
+         
 			}
 			else {
 				cleanup();
 			}
 		}];
+         */
 	}
 	else {
+        [self.delegate videoRecordingFailed];
 		cleanup();
 	}
 

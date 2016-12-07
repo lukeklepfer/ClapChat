@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tiW-gc-MeG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -65,6 +65,7 @@
                         <outlet property="previewView" destination="Luh-Fk-2xg" id="D9M-Ol-kH6"/>
                         <outlet property="recordBtn" destination="Exp-Nb-cFk" id="Tr0-AC-M06"/>
                         <segue destination="bA9-Aa-RF1" kind="presentation" identifier="ShowLoginVC" id="f2R-Rp-Fok"/>
+                        <segue destination="tiW-gc-MeG" kind="show" identifier="ShowUsersVC" id="pVf-0t-Rtq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -230,19 +231,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uze-u0-OCp">
-                                <rect key="frame" x="0.0" y="59" width="320" height="421"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSO-Oq-cHU">
+                                <rect key="frame" x="0.0" y="10" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Send a Clap" id="QYc-5L-BxU">
+                                        <barButtonItem key="rightBarButtonItem" image="send_btn" id="HQq-FO-PUV">
+                                            <connections>
+                                                <action selector="sendTapped:" destination="tiW-gc-MeG" id="eLm-he-LdS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uze-u0-OCp">
+                                <rect key="frame" x="0.0" y="98" width="320" height="382"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="80" id="Lxz-mf-cVk" customClass="UserCell" customModule="ClapChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="64" id="Lxz-mf-cVk" customClass="UserCell" customModule="ClapChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lxz-mf-cVk" id="W91-40-XXD">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aMidnightToker7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hR-O0-eUa">
-                                                    <rect key="frame" x="8" y="18" width="200" height="42"/>
+                                                    <rect key="frame" x="8" y="11" width="200" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="FlR-4J-FAk"/>
                                                         <constraint firstAttribute="width" constant="200" id="lmV-aK-eCo"/>
@@ -265,7 +278,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DSh-H3-OJP">
-                                <rect key="frame" x="0.0" y="15" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="54" width="320" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="uzB-dl-VeA"/>
                                 </constraints>
@@ -274,12 +287,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DSh-H3-OJP" firstAttribute="top" secondItem="MSr-6Q-li3" secondAttribute="top" constant="15" id="66M-Pn-mm0"/>
-                            <constraint firstItem="Uze-u0-OCp" firstAttribute="top" secondItem="DSh-H3-OJP" secondAttribute="bottom" id="CG3-QT-k4g"/>
+                            <constraint firstItem="Uze-u0-OCp" firstAttribute="leading" secondItem="MSr-6Q-li3" secondAttribute="leading" id="75V-SZ-w63"/>
+                            <constraint firstItem="Uze-u0-OCp" firstAttribute="top" secondItem="DSh-H3-OJP" secondAttribute="bottom" id="9di-rG-t5Z"/>
+                            <constraint firstItem="DSh-H3-OJP" firstAttribute="top" secondItem="fSO-Oq-cHU" secondAttribute="bottom" id="D6V-ag-LRA"/>
+                            <constraint firstAttribute="trailing" secondItem="fSO-Oq-cHU" secondAttribute="trailing" id="S7F-Ja-Vmw"/>
+                            <constraint firstItem="fSO-Oq-cHU" firstAttribute="top" secondItem="MSr-6Q-li3" secondAttribute="top" constant="10" id="TUc-RS-zZV"/>
+                            <constraint firstItem="fSO-Oq-cHU" firstAttribute="leading" secondItem="MSr-6Q-li3" secondAttribute="leading" id="U35-cv-HPm"/>
                             <constraint firstItem="DSh-H3-OJP" firstAttribute="leading" secondItem="MSr-6Q-li3" secondAttribute="leading" id="Wkg-kY-tCb"/>
-                            <constraint firstAttribute="trailing" secondItem="Uze-u0-OCp" secondAttribute="trailing" id="fVk-RP-ihs"/>
-                            <constraint firstItem="Uze-u0-OCp" firstAttribute="leading" secondItem="MSr-6Q-li3" secondAttribute="leading" id="hcb-3g-FWs"/>
-                            <constraint firstItem="X3V-84-fMY" firstAttribute="top" secondItem="Uze-u0-OCp" secondAttribute="bottom" id="oay-za-gL1"/>
+                            <constraint firstAttribute="trailing" secondItem="Uze-u0-OCp" secondAttribute="trailing" id="dQP-WL-Qhm"/>
+                            <constraint firstItem="X3V-84-fMY" firstAttribute="top" secondItem="Uze-u0-OCp" secondAttribute="bottom" id="klV-zV-faf"/>
                             <constraint firstAttribute="trailing" secondItem="DSh-H3-OJP" secondAttribute="trailing" id="tJu-hb-eWu"/>
                         </constraints>
                     </view>
@@ -289,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2N-5e-rG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582.5" y="35"/>
+            <point key="canvasLocation" x="1456.875" y="35"/>
         </scene>
     </scenes>
     <resources>
@@ -297,5 +313,6 @@
         <image name="createsnap_btn" width="30" height="30"/>
         <image name="devslopes" width="1080" height="1349"/>
         <image name="devslopes-mountains-white" width="451" height="335"/>
+        <image name="send_btn" width="11" height="18"/>
     </resources>
 </document>
