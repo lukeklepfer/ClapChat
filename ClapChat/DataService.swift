@@ -39,4 +39,16 @@ class DataService {
         mainRef.child("users").child(uid).child("profile").setValue(profile)
     }
     
+    func sendMediaClap(uid: String, recipients: Dictionary<String, User>, mediaUrl: URL, text: String? = nil){
+        
+        var uids = [String]()
+        for uid in recipients.keys {
+            uids.append(uid)
+        }
+        
+        let clap: Dictionary<String, Any> = ["uid": uid, "recipients": uids, "mediaUrl":mediaUrl.absoluteString, "text": text, "openCount": 0]
+        
+        mainRef.child("claps").childByAutoId().setValue(clap)
+        
+    }
 }

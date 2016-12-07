@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
+import FirebaseAuth
 
 class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -80,8 +81,7 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     print("\(error.debugDescription)")
                 }else{
                     let downloadURL = meta?.downloadURL()
-                    //save url
-                    self.dismiss(animated: true, completion: nil)
+                    DataService.instance.sendMediaClap(uid: FIRAuth.auth()!.currentUser!.uid, recipients: self.selectedUsers, mediaUrl: downloadURL!, text: "This is Kool")
                 }
             })
         }else{
@@ -94,12 +94,11 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     }else{
                         let downloadURL = meta?.downloadURL()
                         //save download
-                        self.dismiss(animated: true, completion: nil)
                     }
                 })
             }
         }
-    
+        self.dismiss(animated: true, completion: nil)
     }
 
     
