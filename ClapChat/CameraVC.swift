@@ -38,6 +38,10 @@ class CameraVC: AAPLCameraViewController, AAPLCameraVCDelegate{
         toggleMovieRecording()
     }
     
+    @IBAction func snapBtnTapped(_ sender: Any) {
+        takeSnap()
+    }
+    
     
     func videoRecordingComplete(_ videoURL: URL!) {
         performSegue(withIdentifier: "ShowUsersVC", sender: ["videoUrl": videoURL])

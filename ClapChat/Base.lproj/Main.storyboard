@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,17 +25,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exp-Nb-cFk">
-                                <rect key="frame" x="125" y="402" width="70" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2uJ-9o-FxH">
+                                <rect key="frame" x="88" y="402" width="144" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-ok-wim">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Ikb-ye-EI4"/>
+                                            <constraint firstAttribute="width" constant="70" id="NKA-kC-QgZ"/>
+                                        </constraints>
+                                        <state key="normal" image="snap_btn"/>
+                                        <connections>
+                                            <action selector="snapBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NoG-jh-1gi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exp-Nb-cFk">
+                                        <rect key="frame" x="74" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="VbA-cV-Ar6"/>
+                                            <constraint firstAttribute="height" constant="70" id="mCo-iG-Y1O"/>
+                                        </constraints>
+                                        <state key="normal" image="createsnap_btn"/>
+                                        <connections>
+                                            <action selector="recBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg0-gd-bda"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="VbA-cV-Ar6"/>
-                                    <constraint firstAttribute="height" constant="70" id="mCo-iG-Y1O"/>
+                                    <constraint firstAttribute="height" constant="70" id="CW1-6f-V98"/>
                                 </constraints>
-                                <state key="normal" image="createsnap_btn"/>
-                                <connections>
-                                    <action selector="recBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg0-gd-bda"/>
-                                </connections>
-                            </button>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fag-jh-lxT">
                                 <rect key="frame" x="226" y="28" width="70" height="70"/>
                                 <constraints>
@@ -50,12 +69,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Exp-Nb-cFk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DlY-IA-kEL"/>
                             <constraint firstAttribute="trailing" secondItem="Luh-Fk-2xg" secondAttribute="trailing" id="Hyx-N8-KUe"/>
                             <constraint firstItem="fag-jh-lxT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="V2W-uM-sZK"/>
+                            <constraint firstItem="2uJ-9o-FxH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VtU-BW-dEj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fag-jh-lxT" secondAttribute="trailing" constant="8" id="bhm-FP-Bkq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2uJ-9o-FxH" secondAttribute="bottom" constant="8" id="qVF-85-jGv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Luh-Fk-2xg" secondAttribute="bottom" id="si2-WD-tPW"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Exp-Nb-cFk" secondAttribute="bottom" constant="8" id="slO-yk-pSi"/>
                             <constraint firstItem="Luh-Fk-2xg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v6N-ul-TIe"/>
                             <constraint firstItem="Luh-Fk-2xg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vNm-hL-H1J"/>
                         </constraints>
@@ -314,5 +333,6 @@
         <image name="devslopes" width="1080" height="1349"/>
         <image name="devslopes-mountains-white" width="451" height="335"/>
         <image name="send_btn" width="11" height="18"/>
+        <image name="snap_btn" width="54" height="62"/>
     </resources>
 </document>

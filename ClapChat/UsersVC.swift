@@ -81,7 +81,7 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     print("\(error.debugDescription)")
                 }else{
                     let downloadURL = meta?.downloadURL()
-                    DataService.instance.sendMediaClap(uid: FIRAuth.auth()!.currentUser!.uid, recipients: self.selectedUsers, mediaUrl: downloadURL!, text: "This is Kool")
+                    DataService.instance.sendMediaClap(uid: FIRAuth.auth()!.currentUser!.uid, recipients: self.selectedUsers, mediaUrl: downloadURL!, text: "Video")
                 }
             })
         }else{
@@ -93,7 +93,7 @@ class UsersVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                         print("Error uploading image \(error.debugDescription)")
                     }else{
                         let downloadURL = meta?.downloadURL()
-                        //save download
+                        DataService.instance.sendMediaClap(uid: FIRAuth.auth()!.currentUser!.uid, recipients: self.selectedUsers, mediaUrl: downloadURL!, text: "Picture")
                     }
                 })
             }

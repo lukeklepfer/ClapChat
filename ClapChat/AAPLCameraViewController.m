@@ -546,7 +546,7 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 	} );
 }
 
-- (IBAction)snapStillImage:(id)sender
+- (void)takeSnap
 {
 	dispatch_async( self.sessionQueue, ^{
 		AVCaptureConnection *connection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];

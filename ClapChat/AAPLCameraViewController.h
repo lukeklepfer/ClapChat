@@ -18,7 +18,8 @@ View controller for camera interface.
 @property (retain) id <AAPLCameraVCDelegate> delegate;
 
 - (void)changeCamera;
-- (void)toggleMovieRecording; 
+- (void)toggleMovieRecording;
+- (void)takeSnap;
 
 
 @end
